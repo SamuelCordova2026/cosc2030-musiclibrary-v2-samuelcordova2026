@@ -74,9 +74,12 @@ class Song {
     public:
         Song()
         {
-            songName = "None";
+            SetSongName("None");
+            SetSongDate("None");
+            SetSongGenre("None");
             //Artist initialized when Song made, so no need to default its values
-            songLength = 0;
+            SetSongAlbum("None");
+            SetSongLength(0);
         }
 
         Song(string name, string date, string genre, Artist artist, string albumName, int length)
