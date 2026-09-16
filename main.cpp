@@ -29,10 +29,13 @@ class Artist
 
         void Display()
         {
-            cout << "Artist name: " << artistName << endl;
-            cout << "Artist genre: " << artistGenre << endl;
+            cout << endl;
+            cout << "Artist Details" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "Name: " << artistName << endl;
+            cout << "Usual genre: " << artistGenre << endl;
             cout << "Total followers: " << artistFollowers << endl;
-            cout << "Artist rating: " << artistRating << endl;
+            cout << "Rating: " << artistRating << " out of 5" << endl;
         }
 
         void SetArtistName(string name)
@@ -82,8 +85,9 @@ class Song {
 
         void Display()
         {
+            cout << endl;
             cout << "Song name: " << songName << endl;
-            cout << "Song length: " << songLength << endl;
+            cout << "Song length: " << songLength << " seconds" << endl;
             songArtist.Display();
         }
 
