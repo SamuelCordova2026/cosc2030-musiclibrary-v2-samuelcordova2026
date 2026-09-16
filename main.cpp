@@ -53,7 +53,42 @@ class Artist
 }; 
 
 class Song {
-    //TODO
+    private:
+        string songName;
+        Artist songArtist;
+        int songLength;
+    public:
+        Song()
+        {
+            songName = "None";
+            //Artist initialized when Song made, so no need to default its values
+            songLength = 0;
+        }
+
+        void Display()
+        {
+            cout << "Song name: " << songName << endl;
+            cout << "Song length: " << songLength << endl;
+            songArtist.Display();
+        }
+
+        void SetSongName(string name)
+            { songName = name; }
+        
+        void SetSongArtist(Artist artist)
+            { songArtist = artist; }
+
+        void SetSongLength(int length)
+            { songLength = length; }
+
+        string GetSongName()
+            { return songName; }
+
+        Artist GetSongArtist()
+            { return songArtist; }
+
+        int GetSongLength()
+            { return songLength; }
 }; 
 
 int main() {
