@@ -13,10 +13,18 @@ class Artist
     public:
         Artist()
         {
-            artistName = "None";
-            artistGenre = "None";
-            artistFollowers = 0;
-            artistRating = 0;
+            SetArtistName("None");
+            SetArtistGenre("None");
+            SetFollowers(0);
+            SetRating(0);
+        }
+
+        Artist(string name, string genre, int followers, double rating)
+        {
+            SetArtistName(name);
+            SetArtistGenre(genre);
+            SetFollowers(followers);
+            SetRating(rating);
         }
 
         void Display()
@@ -65,6 +73,13 @@ class Song {
             songLength = 0;
         }
 
+        Song(string name, Artist artist, int length)
+        {
+            SetSongName(name);
+            SetSongArtist(artist);
+            SetSongLength(length);
+        }
+
         void Display()
         {
             cout << "Song name: " << songName << endl;
@@ -93,10 +108,13 @@ class Song {
 
 int main() {
     // Create instance of Artist object 
+    Artist newArtist("Toby Fox", "Chiptune", 4228774, 4.9);
 
     // Create instance of Song object
+    Song newSong("Rude Buster", newArtist, 75);
 
     // Call song instance display function 
+    newSong.Display();
 
     return 0; 
 }
