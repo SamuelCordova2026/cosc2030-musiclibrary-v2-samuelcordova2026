@@ -32,10 +32,10 @@ class Artist
             cout << endl;
             cout << "Artist Details" << endl;
             cout << "-----------------------------" << endl;
-            cout << "Name: " << artistName << endl;
-            cout << "Usual genre: " << artistGenre << endl;
-            cout << "Total followers: " << artistFollowers << endl;
-            cout << "Rating: " << artistRating << " out of 5" << endl;
+            cout << "Name: " << GetArtistName() << endl;
+            cout << "Usual genre: " << GetArtistGenre() << endl;
+            cout << "Total followers: " << GetFollowers() << endl;
+            cout << "Rating: " << GetRating() << " out of 5" << endl;
         }
 
         void SetArtistName(string name)
@@ -66,7 +66,10 @@ class Artist
 class Song {
     private:
         string songName;
+        string releaseDate;
+        string songGenre;
         Artist songArtist;
+        string albumName;
         int songLength;
     public:
         Song()
@@ -76,26 +79,43 @@ class Song {
             songLength = 0;
         }
 
-        Song(string name, Artist artist, int length)
+        Song(string name, string date, string genre, Artist artist, string albumName, int length)
         {
             SetSongName(name);
+            SetSongDate(date);
+            SetSongGenre(genre);
             SetSongArtist(artist);
+            SetSongAlbum(albumName);
             SetSongLength(length);
         }
 
         void Display()
         {
             cout << endl;
-            cout << "Song name: " << songName << endl;
-            cout << "Song length: " << songLength << " seconds" << endl;
+            cout << "Song Details" << endl;
+            cout << "-----------------------------" << endl;
+            cout << "Song name: " << GetSongName() << endl;
+            cout << "Release date: " << GetSongDate() << endl;
+            cout << "Music Genre: " << GetSongGenre() << endl;
+            cout << "Appears in: " << GetSongAlbum() << endl;
+            cout << "Song length: " << GetSongLength() << " seconds" << endl;
             songArtist.Display();
         }
 
         void SetSongName(string name)
             { songName = name; }
+
+        void SetSongDate(string date)
+            { releaseDate = date; }
+
+        void SetSongGenre(string genre)
+            { songGenre = genre; }
         
         void SetSongArtist(Artist artist)
             { songArtist = artist; }
+
+        void SetSongAlbum(string album)
+            { albumName = album; }
 
         void SetSongLength(int length)
             { songLength = length; }
@@ -103,8 +123,17 @@ class Song {
         string GetSongName()
             { return songName; }
 
+        string GetSongDate()
+            { return releaseDate; }
+        
+        string GetSongGenre()
+            { return songGenre; }
+
         Artist GetSongArtist()
             { return songArtist; }
+
+        string GetSongAlbum()
+            { return albumName; }
 
         int GetSongLength()
             { return songLength; }
@@ -115,7 +144,7 @@ int main() {
     Artist newArtist("Toby Fox", "Chiptune", 4228774, 4.9);
 
     // Create instance of Song object
-    Song newSong("Rude Buster", newArtist, 75);
+    Song newSong("Rude Buster", "November 1, 2018", "Chiptune", newArtist, "Deltarune", 75);
 
     // Call song instance display function 
     newSong.Display();
