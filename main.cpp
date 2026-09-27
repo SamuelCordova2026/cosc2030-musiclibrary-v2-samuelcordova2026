@@ -1,8 +1,12 @@
 #include <iostream>
 #include <string>
 
+#include "ClassFiles/Artist/Artist.h"
+#include "ClassFiles/Song/Song.h"
+
 using namespace std;
 
+/*
 class Artist
 {
     private:
@@ -64,6 +68,7 @@ class Artist
 }; 
 
 class Song {
+
     private:
         string songName;
         string releaseDate;
@@ -141,7 +146,7 @@ class Song {
         int GetSongLength()
             { return songLength; }
 }; 
-
+*/
 int main() {
     // Create instance of Artist object 
     Artist newArtist("Toby Fox", "Chiptune", 4228774, 4.9);
