@@ -3,6 +3,8 @@
 
 #include "ClassFiles/Artist/Artist.h"
 #include "ClassFiles/Song/Song.h"
+#include "ClassFiles/Artist/GroupArtist.h"
+#include "ClassFiles/Band/Band.h"
 
 using namespace std;
 
@@ -149,13 +151,30 @@ class Song {
 */
 int main() {
     // Create instance of Artist object 
-    Artist newArtist("Toby Fox", "Chiptune", 4228774, 4.9);
+    //Artist newArtist("Toby Fox", "Chiptune", 4228774, 4.9);
 
     // Create instance of Song object
-    Song newSong("Rude Buster", "November 1, 2018", "Chiptune", newArtist, "Deltarune", 75);
+    //Song newSong("Rude Buster", "November 1, 2018", "Chiptune", newArtist, "Deltarune", 75);
 
     // Call song instance display function 
-    newSong.Display();
+    //newSong.Display();
+
+    GroupArtist johnLennon("John Lennon", "Rock", 12345, 5);
+    GroupArtist paulMcCartney("Paul McCartney", "Rock", 12345, 5);
+    GroupArtist georgeHarrison("George Harrison", "Rock", 12345, 5);
+    GroupArtist ringoStarr("Ringo Starr", "Rock", 12345, 5);
+
+    Band theBeatles("The Beatles");
+
+    theBeatles.AddMember(johnLennon);
+    theBeatles.AddMember(paulMcCartney);
+    theBeatles.AddMember(georgeHarrison);
+    theBeatles.AddMember(ringoStarr);
+
+
+
+    theBeatles.DisplayMembers();
+
 
     return 0; 
 }

@@ -15,7 +15,7 @@ class Artist
     public:
         Artist();
         Artist(string name, string genre, int followers, double rating);
-        void Display();
+        virtual void Display();
         void SetArtistName(string name);
         void SetArtistGenre(string genre);
         void SetFollowers(int followers);
@@ -24,5 +24,5 @@ class Artist
         string GetArtistGenre();
         int GetFollowers();
         double GetRating();
-    }; 
+}; 
 #endif

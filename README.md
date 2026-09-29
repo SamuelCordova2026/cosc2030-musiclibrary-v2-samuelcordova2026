@@ -1,7 +1,8 @@
 # Music Library
 
 # Additional Classes
-
+-GroupArtist
+-Band
 ## Requirements
 - Identify at least one new class that will be a derived class, inheriting from another base class. Use public inheritance to extend functionality.
 - Ensure each class has a constructor and destructor. For classes involved in inheritance, ensure the constructor calls the base class constructor properly using an initializer list.
