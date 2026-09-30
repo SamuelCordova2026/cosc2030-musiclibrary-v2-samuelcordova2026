@@ -6,12 +6,13 @@
 
 using namespace std;
 
-class GroupArtist : public Artist
+//FOR ARTISTS IN A GROUP (EX: A BAND MEMBER)
+class GroupArtist : public Artist //Inheritance
 {
     private:
         //Band bandVar;
     public:
-        virtual void Display() override;
+        void Display() override; //Polymorphism
         GroupArtist();
         GroupArtist(string name, string genre, int followers, double rating);
 

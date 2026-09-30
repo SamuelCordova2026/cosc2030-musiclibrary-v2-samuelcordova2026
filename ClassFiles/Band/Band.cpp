@@ -19,7 +19,7 @@ Band::Band()
 void Band::DisplayMembers()
 {
     cout << endl;
-    cout << "Band members: ";
+    cout << "Band members: " << endl;
     for (int i = 0; i < bandMembers.size(); i++)
     {
         cout << bandMembers.at(i).GetArtistName() << endl;

@@ -13,7 +13,7 @@ Song::Song()
     SetSongLength(0);
 }
 
-Song::Song(string name, string date, string genre, Artist artist, string albumName, int length)
+Song::Song(string name, string date, string genre, Artist* artist, string albumName, int length)
 {
     SetSongName(name);
     SetSongDate(date);
@@ -33,7 +33,7 @@ void Song::Display()
     cout << "Music Genre: " << GetSongGenre() << endl;
     cout << "Appears in: " << GetSongAlbum() << endl;
     cout << "Song length: " << GetSongLength() << " seconds" << endl;
-    songArtist.Display();
+    songArtist -> Display();
 }
 
 void Song::SetSongName(string name)
@@ -45,7 +45,7 @@ void Song::SetSongDate(string date)
 void Song::SetSongGenre(string genre)
     { songGenre = genre; }
 
-void Song::SetSongArtist(Artist artist)
+void Song::SetSongArtist(Artist* artist)
     { songArtist = artist; }
 
 void Song::SetSongAlbum(string album)
@@ -63,7 +63,7 @@ string Song::GetSongDate()
 string Song::GetSongGenre()
     { return songGenre; }
 
-Artist Song::GetSongArtist()
+Artist* Song::GetSongArtist()
     { return songArtist; }
 
 string Song::GetSongAlbum()

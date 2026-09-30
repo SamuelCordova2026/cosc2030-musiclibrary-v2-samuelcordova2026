@@ -5,6 +5,8 @@
 
 using namespace std;
 
+
+//DEFAULT CLASS ALL ARTISTS WILL INHERIT FROM
 class Artist
 {
     private:
@@ -13,9 +15,7 @@ class Artist
         int artistFollowers;
         double artistRating;
     public:
-        Artist();
-        Artist(string name, string genre, int followers, double rating);
-        virtual void Display();
+        virtual void Display() = 0; //Pure virtual function
         void SetArtistName(string name);
         void SetArtistGenre(string genre);
         void SetFollowers(int followers);

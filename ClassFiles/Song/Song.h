@@ -12,23 +12,23 @@ class Song
         string songName;
         string releaseDate;
         string songGenre;
-        Artist songArtist;
+        Artist* songArtist;
         string albumName;
         int songLength;
     public:
         Song();
-        Song(string name, string date, string genre, Artist artist, string albumName, int length);
+        Song(string name, string date, string genre, Artist* artist, string albumName, int length);
         void Display();
         void SetSongName(string name);
         void SetSongDate(string date);
         void SetSongGenre(string genre);
-        void SetSongArtist(Artist artist);
+        void SetSongArtist(Artist* artist);
         void SetSongAlbum(string album);
         void SetSongLength(int length);
         string GetSongName();
         string GetSongDate();        
         string GetSongGenre();
-        Artist GetSongArtist();
+        Artist* GetSongArtist();
         string GetSongAlbum();
         int GetSongLength();
     }; 

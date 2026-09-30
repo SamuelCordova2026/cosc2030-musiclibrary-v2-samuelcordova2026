@@ -2,6 +2,7 @@
 
 # Additional Classes
 -GroupArtist
+-SoloArtist
 -Band
 ## Requirements
 - Identify at least one new class that will be a derived class, inheriting from another base class. Use public inheritance to extend functionality.
