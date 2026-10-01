@@ -1,9 +1,9 @@
 # Music Library
-
+I want to make a program that acts sort of like a playlist. It will play a song, display the details of the artist/band that made it, and you can cycle through the playlist to see each song.
 # Additional Classes
--GroupArtist
--SoloArtist
--Band
+- GroupArtist
+- SoloArtist
+- Band
 ## Requirements
 - Identify at least one new class that will be a derived class, inheriting from another base class. Use public inheritance to extend functionality.
     - Both GroupArtist and SoloArtist inherit from the Artist class. This made it simple to have all the default variables (name, genre, etc.) in the base class and just build off of that.

@@ -5,6 +5,7 @@
 #include "ClassFiles/Song/Song.h"
 #include "ClassFiles/Artist/GroupArtist.h"
 #include "ClassFiles/Band/Band.h"
+#include "ClassFiles/Playlist/Playlist.h"
 
 using namespace std;
 
@@ -164,6 +165,8 @@ int main() {
     GroupArtist georgeHarrison("George Harrison", "Rock", 12345, 5);
     GroupArtist ringoStarr("Ringo Starr", "Rock", 12345, 5);
 
+    Playlist NewPlaylist("New Playlist");
+
     Band theBeatles("The Beatles");
 
     theBeatles.AddMember(johnLennon);
@@ -171,9 +174,25 @@ int main() {
     theBeatles.AddMember(georgeHarrison);
     theBeatles.AddMember(ringoStarr);
 
+    Song song1("Song 1", "Date 1", "Genre 1", &johnLennon, "Album 1", 1);
+    Song song2("Song 2", "Date 2", "Genre 2", &johnLennon, "Album 2", 2);
+    Song song3("Song 3", "Date 3", "Genre 3", &johnLennon, "Album 3", 3);
+    Song song4("Song 4", "Date 4", "Genre 4", &johnLennon, "Album 4", 4);
+
+    NewPlaylist.AddSong(song1);
+    NewPlaylist.AddSong(song2);
+    NewPlaylist.AddSong(song3);
+    NewPlaylist.AddSong(song4);
+
+    DisplayCurrSong(NewPlaylist);
+
+    NewPlaylist.NextSong();
+    NewPlaylist.NextSong();
+    NewPlaylist.NextSong();
+    NewPlaylist.NextSong();
 
 
-    theBeatles.DisplayMembers();
+    //theBeatles.DisplayMembers();
 
 
     return 0; 

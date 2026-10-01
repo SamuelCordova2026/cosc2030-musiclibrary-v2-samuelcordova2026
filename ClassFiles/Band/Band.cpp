@@ -22,7 +22,7 @@ void Band::DisplayMembers()
     cout << "Band members: " << endl;
     for (int i = 0; i < bandMembers.size(); i++)
     {
-        cout << bandMembers.at(i).GetArtistName() << endl;
+        cout << "\t" << bandMembers.at(i).GetArtistName() << endl;
     }
 }
 
