@@ -10,9 +10,24 @@ using namespace std;
         }
         Playlist::Playlist(string name)
         {
-            playlistName = name;
+            SetPlaylistName(name);
         }
         
+        Playlist::Playlist(const Playlist& copy)
+        {
+            SetPlaylistName(copy.GetPlaylistName());
+            SetSongList(copy.GetSongList());
+        }
+
+        void Playlist::SetPlaylistName(string name)
+            { playlistName = name; }
+        void Playlist::SetSongList(vector<Song> list)
+            { songList = list; }
+
+        string Playlist::GetPlaylistName() const
+            { return playlistName; }
+        vector<Song> Playlist::GetSongList() const
+            { return songList; }
         
         void DisplayCurrSong(Playlist& playlist)
         {

@@ -10,6 +10,7 @@ I want to make a program that acts as a playlist viewer. You will select a playl
     - Both GroupArtist and SoloArtist inherit from the Artist class. This made it simple to have all the default variables (name, genre, etc.) in the base class and just build off of that.
 - Ensure each class has a constructor and destructor. For classes involved in inheritance, ensure the constructor calls the base class constructor properly using an initializer list.
 - Each new class should have a copy constructor. 
+    - If this program were built upon more, users would be able to copy playlists and edit them. Copy constructors makes it much easier to copy each class.
 - Implement at least one virtual function in a base class that can be overridden by a derived class, enabling runtime polymorphism.
     - The display function in both SoloArtist and GroupArtist overrides the base Display function in the Artist class. Since a GroupArtist will have different variables than a SoloArtist, it needs to display different things.
 - Include private member variables and protected members if inheritance will be used, ensuring derived classes can access needed data.
@@ -19,4 +20,8 @@ I want to make a program that acts as a playlist viewer. You will select a playl
     - The Artist class Display function is virtual since the Display function will never be called unless it's being overriden in a child class.
 
 
+### Old Diagram
 ![UML Diagram](umlDiagram.png)
+
+### Updated Diagram
+![UML Diagram](UpdgatedUml.png)

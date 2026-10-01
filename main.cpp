@@ -16,26 +16,29 @@ int main() {
 
     //Regions used for easier organization
     #pragma region TheBeatles 
-    Playlist BeatlesPlaylist("The Beatles");
+    Playlist BeatlesPlaylist("The Beatles"); //Create playlist
 
-    Band theBeatles("The Beatles");
+    Band theBeatles("The Beatles"); //Create band that makes the songs
 
+    //Create the artists that go in the band
     GroupArtist johnLennon("John Lennon", theBeatles.GetName(), 12345, 5);
     GroupArtist paulMcCartney("Paul McCartney", theBeatles.GetName(), 12345, 5);
     GroupArtist georgeHarrison("George Harrison",theBeatles.GetName(), 12345, 5);
     GroupArtist ringoStarr("Ringo Starr", theBeatles.GetName(), 12345, 5);
 
-
+    //Add said artists to band
     theBeatles.AddMember(johnLennon);
     theBeatles.AddMember(paulMcCartney);
     theBeatles.AddMember(georgeHarrison);
     theBeatles.AddMember(ringoStarr);
 
+    //Create Songs that are created from the band
     Song heyJude("Hey Jude", "1968", "Rock", theBeatles, "The Beatles 1967-1970", 431);
     Song letItBe("Let It Be", "1970", "Rock", theBeatles, "Let It Be", 243);
     Song comeTogether("Come Together", "1969", "Rock", theBeatles, "Abbey Road", 259);
     Song hereComesTheSun("Here Comes the Sun", "1969", "Rock", theBeatles, "Abbey Road", 185);
 
+    //Add songs to the playlist
     BeatlesPlaylist.AddSong(heyJude);
     BeatlesPlaylist.AddSong(letItBe);
     BeatlesPlaylist.AddSong(comeTogether);
@@ -104,6 +107,8 @@ int main() {
     Playlist selectedPlaylist;
 
     DisplayStartMenu();
+
+    //User selects which playlist they would like to listen to
     cin >> userInput;
 
     if (userInput == "1")
@@ -129,9 +134,9 @@ int main() {
     while (userInput != "a" && userInput != "d" && userInput != "q")
     {
         cout << endl << endl;
-        cout << " -> Next song: d" << endl;
-        cout << " <- Previous song: a" << endl;
-        cout << "Quit Program: q" << endl;
+        cout << " -> Next song: d" << endl; //User inputs d to go to next song
+        cout << " <- Previous song: a" << endl; //User inputs a to go to previous osng
+        cout << "Quit Program: q" << endl; //user inputs q to quit program
         cout << "Please type your choice: ";
         cin >> userInput;
         if (userInput == "a")

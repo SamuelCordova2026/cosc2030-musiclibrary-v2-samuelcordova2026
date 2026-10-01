@@ -7,18 +7,21 @@
 class Playlist
 {
     private:
-        int currSongIndex = 0;
+        int currSongIndex = 0; //Song index won't need to be accessed outside the playlist class, so it won't need getters or setters.
         string playlistName;
         vector<Song> songList;
     public:
         Playlist();
         Playlist(string name);
 
-        Playlist(const Playlist& copy)
-        {
-            playlistName = copy.playlistName;
-            songList = copy.songList;
-        }
+        Playlist(const Playlist& copy);
+
+        void SetPlaylistName(string name);
+        void SetSongList(vector<Song> list);
+
+        string GetPlaylistName() const;
+        vector<Song> GetSongList() const;
+
 
         void AddSong(Song song);
         
