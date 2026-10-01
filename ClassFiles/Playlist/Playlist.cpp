@@ -15,6 +15,7 @@ using namespace std;
         
         void DisplayCurrSong(Playlist& playlist)
         {
+            cout << "Track " << playlist.currSongIndex + 1 << ": " << playlist.songList.at(playlist.currSongIndex).GetSongName() << endl;
             playlist.songList.at(playlist.currSongIndex).Display();
         }
     

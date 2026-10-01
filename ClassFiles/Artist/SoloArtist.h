@@ -9,7 +9,7 @@ class SoloArtist : Artist //Inheritance
     public:
         void Display() override; //Polymorphism
         SoloArtist();
-        SoloArtist(string name, string genre, int followers, double rating);
+        SoloArtist(string name, int followers, double rating);
 };
 
 #endif

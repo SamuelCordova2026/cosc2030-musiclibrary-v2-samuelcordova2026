@@ -14,7 +14,7 @@ class GroupArtist : public Artist //Inheritance
     public:
         void Display() override; //Polymorphism
         GroupArtist();
-        GroupArtist(string name, string genre, int followers, double rating);
+        GroupArtist(string name, int followers, double rating);
 
         //void SetBand(Band band);
         //Band GetBand();

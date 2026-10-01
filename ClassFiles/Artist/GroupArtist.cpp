@@ -11,7 +11,6 @@ using namespace std;
             cout << "Artist Details" << endl;
             cout << "-----------------------------" << endl;
             cout << "Name: " << GetArtistName() << endl;
-            cout << "Usual genre: " << GetArtistGenre() << endl;
             cout << "Total followers: " << GetFollowers() << endl;
             cout << "Rating: " << GetRating() << " out of 5" << endl;
         }
@@ -19,15 +18,13 @@ using namespace std;
         GroupArtist::GroupArtist()
         {
             SetArtistName("None");
-            SetArtistGenre("None");
             SetFollowers(0);
             SetRating(0);
         }
 
-        GroupArtist::GroupArtist(string name, string genre, int followers, double rating)
+        GroupArtist::GroupArtist(string name, int followers, double rating)
         {
             SetArtistName(name);
-            SetArtistGenre(genre);
             SetFollowers(followers);
             SetRating(rating);        }
             
