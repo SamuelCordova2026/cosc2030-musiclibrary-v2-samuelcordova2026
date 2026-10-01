@@ -4,7 +4,7 @@
 #include "Artist.h"
 
 //FOR ARTISTS WHO MAKE MUSIC ALONE
-class SoloArtist : Artist //Inheritance
+class SoloArtist : public Artist //Inheritance
 {
     public:
         void Display() override; //Polymorphism

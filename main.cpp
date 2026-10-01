@@ -2,8 +2,9 @@
 #include <string>
 
 #include "ClassFiles/Artist/Artist.h"
-#include "ClassFiles/Song/Song.h"
 #include "ClassFiles/Artist/GroupArtist.h"
+#include "ClassFiles/Artist/SoloArtist.h"
+#include "ClassFiles/Song/Song.h"
 #include "ClassFiles/Band/Band.h"
 #include "ClassFiles/Playlist/Playlist.h"
 
@@ -43,6 +44,22 @@ int main() {
 
     #pragma region Hype Game Music
     Playlist HypeGameMusicPlaylist("Hype Video Game Music");
+
+    SoloArtist tobyFox("Toby Fox", 12345, 5);
+    SoloArtist lenaRaine("Lena Reign", 12345, 5);
+    SoloArtist chirstopherLarkin("Chrisopher Larkin", 12345, 5);
+
+    Song megalovania("Megalovania", "2015", "Chiptune", &tobyFox, "Undertale OST", 156);
+    Song reachForTheSummit("Reach for the Summit", "2018", "Electronic", &lenaRaine, "Celeste OST", 669);
+    Song pigstep("Pigstep", "2020", "Electronic", &lenaRaine, "Minecraft 1.16 Update OST", 150);
+    Song nightmareKing("Nightmare King", "2017", "Gothic", &chirstopherLarkin, "Hollow Knight: The Grimm Troupe DLC OST", 332);
+
+    HypeGameMusicPlaylist.AddSong(megalovania);
+    HypeGameMusicPlaylist.AddSong(reachForTheSummit);
+    HypeGameMusicPlaylist.AddSong(pigstep);
+    HypeGameMusicPlaylist.AddSong(nightmareKing);
+
+
     #pragma endregion HypeGameMusic
 
     #pragma region Classical Piano
