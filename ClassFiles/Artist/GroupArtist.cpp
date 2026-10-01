@@ -11,6 +11,7 @@ using namespace std;
             cout << "Artist Details" << endl;
             cout << "-----------------------------" << endl;
             cout << "Name: " << GetArtistName() << endl;
+            cout << "Member of " << GetBandName() << endl;
             cout << "Total followers: " << GetFollowers() << endl;
             cout << "Rating: " << GetRating() << " out of 5" << endl;
         }
@@ -22,16 +23,16 @@ using namespace std;
             SetRating(0);
         }
 
-        GroupArtist::GroupArtist(string name, int followers, double rating)
+        GroupArtist::GroupArtist(string name, string bandName, int followers, double rating)
         {
             SetArtistName(name);
             SetFollowers(followers);
-            SetRating(rating);        }
-            
-            /*
+            SetRating(rating);        
+            SetBandName(bandName);
+        }
 
-        void GroupArtist::SetBand(Band band)
-            { bandVar = band; }
-        Band GroupArtist::GetBand()
-            { return bandVar; }
-             */
+        void GroupArtist::SetBandName(string name)
+            { bandName = name; }
+        string GroupArtist::GetBandName()
+            { return bandName; }
+             

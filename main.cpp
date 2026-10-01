@@ -17,38 +17,39 @@ int main() {
     #pragma region TheBeatles //For easier organization
     Playlist BeatlesPlaylist("The Beatles");
 
-    GroupArtist johnLennon("John Lennon", 12345, 5);
-    GroupArtist paulMcCartney("Paul McCartney", 12345, 5);
-    GroupArtist georgeHarrison("George Harrison", 12345, 5);
-    GroupArtist ringoStarr("Ringo Starr", 12345, 5);
-
     Band theBeatles("The Beatles");
+
+    GroupArtist johnLennon("John Lennon", theBeatles.GetName(), 12345, 5);
+    GroupArtist paulMcCartney("Paul McCartney", theBeatles.GetName(), 12345, 5);
+    GroupArtist georgeHarrison("George Harrison",theBeatles.GetName(), 12345, 5);
+    GroupArtist ringoStarr("Ringo Starr", theBeatles.GetName(), 12345, 5);
+
 
     theBeatles.AddMember(johnLennon);
     theBeatles.AddMember(paulMcCartney);
     theBeatles.AddMember(georgeHarrison);
     theBeatles.AddMember(ringoStarr);
 
-    Song song1("Song 1", "Date 1", "Genre 1", &johnLennon, "Album 1", 1);
-    Song song2("Song 2", "Date 2", "Genre 2", &johnLennon, "Album 2", 2);
-    Song song3("Song 3", "Date 3", "Genre 3", &johnLennon, "Album 3", 3);
-    Song song4("Song 4", "Date 4", "Genre 4", &johnLennon, "Album 4", 4);
+    Song heyJude("Hey Jude", "1968", "Rock", theBeatles, "The Beatles 1967-1970", 431);
+    Song letItBe("Let It Be", "1970", "Rock", theBeatles, "Let It Be", 243);
+    Song comeTogether("Come Together", "1969", "Rock", theBeatles, "Abbey Road", 259);
+    Song hereComesTheSun("Here Comes the Sun", "1969", "Rock", theBeatles, "Abbey Road", 185);
 
-    BeatlesPlaylist.AddSong(song1);
-    BeatlesPlaylist.AddSong(song2);
-    BeatlesPlaylist.AddSong(song3);
-    BeatlesPlaylist.AddSong(song4);
+    BeatlesPlaylist.AddSong(heyJude);
+    BeatlesPlaylist.AddSong(letItBe);
+    BeatlesPlaylist.AddSong(comeTogether);
+    BeatlesPlaylist.AddSong(hereComesTheSun);
     #pragma endregion
 
-    #pragma region  HypeGameMusic
+    #pragma region Hype Game Music
     Playlist HypeGameMusicPlaylist("Hype Video Game Music");
     #pragma endregion HypeGameMusic
 
-    #pragma region  HypeGameMusic
+    #pragma region Classical Piano
     Playlist ClassicalPianoPlaylist("Classical Piano");
     #pragma endregion HypeGameMusic
 
-    #pragma region  HypeGameMusic
+    #pragma region Road Trip Singalong
     Playlist RoadTripSingalongPlaylist("Road Trip Singalongs");
     #pragma endregion HypeGameMusic
 
@@ -78,9 +79,13 @@ int main() {
     userInput = " ";
 
     DisplayCurrSong(selectedPlaylist);
-    while (userInput != "a" && userInput != "d")
+    while (userInput != "a" && userInput != "d" && userInput != "q")
     {
-        cout << endl << " <-- a            d -->";
+        cout << endl << endl;
+        cout << " -> Next song: d" << endl;
+        cout << " <- Previous song: a" << endl;
+        cout << "Quit Program: q" << endl;
+        cout << "Please type your choice: ";
         cin >> userInput;
         if (userInput == "a")
         {
@@ -90,8 +95,14 @@ int main() {
         {
             selectedPlaylist.NextSong();
         }
+        else if (userInput == "q")
+        {
+            break;
+        }
         userInput = " ";
     }
+
+    cout << endl << "Enjoy listening to your music!" << endl;
 
     return 0; 
 }

@@ -10,14 +10,14 @@ using namespace std;
 class GroupArtist : public Artist //Inheritance
 {
     private:
-        //Band bandVar;
+        string bandName;
     public:
         void Display() override; //Polymorphism
         GroupArtist();
-        GroupArtist(string name, int followers, double rating);
+        GroupArtist(string name, string bandName, int followers, double rating);
 
-        //void SetBand(Band band);
-        //Band GetBand();
+        void SetBandName(string name);
+        string GetBandName();
 };
 
 #endif

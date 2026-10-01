@@ -21,19 +21,48 @@ Song::Song(string name, string date, string genre, Artist* artist, string albumN
     SetSongArtist(artist);
     SetSongAlbum(albumName);
     SetSongLength(length);
+
+    isBand = false;
+}
+    
+Song::Song(string name, string date, string genre, Band band, string albumName, int length)
+{
+    SetSongName(name);
+    SetSongDate(date);
+    SetSongGenre(genre);
+    SetSongBand(band);
+    SetSongAlbum(albumName);
+    SetSongLength(length);
+
+    isBand = true;
 }
 
 void Song::Display()
 {
-    cout << endl;
-    cout << "Song Details" << endl;
-    cout << "-----------------------------" << endl;
-    cout << "Song name: " << GetSongName() << endl;
-    cout << "Release date: " << GetSongDate() << endl;
-    cout << "Music Genre: " << GetSongGenre() << endl;
-    cout << "Appears in: " << GetSongAlbum() << endl;
-    cout << "Song length: " << GetSongLength() << " seconds" << endl;
-    songArtist -> Display();
+    if (!isBand)
+    {
+        cout << endl;
+        cout << "Song Details" << endl;
+        cout << "-----------------------------" << endl;
+        cout << "Song name: " << GetSongName() << endl;
+        cout << "Release date: " << GetSongDate() << endl;
+        cout << "Music Genre: " << GetSongGenre() << endl;
+        cout << "Appears in: " << GetSongAlbum() << endl;
+        cout << "Song length: " << GetSongLength() << " seconds" << endl;
+        songArtist -> Display();
+    }
+    else
+    {
+        cout << endl;
+        cout << "Song Details" << endl;
+        cout << "-----------------------------" << endl;
+        cout << "Song name: " << GetSongName() << endl;
+        cout << "Release date: " << GetSongDate() << endl;
+        cout << "Music Genre: " << GetSongGenre() << endl;
+        cout << "Appears in: " << GetSongAlbum() << endl;
+        cout << "Song length: " << GetSongLength() << " seconds" << endl;
+        cout << "Created by: " << GetSongBand().GetName() << endl;
+    }
 }
 
 void Song::SetSongName(string name)
@@ -47,6 +76,9 @@ void Song::SetSongGenre(string genre)
 
 void Song::SetSongArtist(Artist* artist)
     { songArtist = artist; }
+
+void Song::SetSongBand(Band band)
+    { songBand = band; }
 
 void Song::SetSongAlbum(string album)
     { albumName = album; }
@@ -65,6 +97,9 @@ string Song::GetSongGenre()
 
 Artist* Song::GetSongArtist()
     { return songArtist; }
+
+Band Song::GetSongBand()
+    { return songBand; }
 
 string Song::GetSongAlbum()
     { return albumName; }
