@@ -14,8 +14,8 @@ void DisplayStartMenu();
 
 int main() {
 
-    
-    #pragma region TheBeatles //For easier organization
+    //Regions used for easier organization
+    #pragma region TheBeatles 
     Playlist BeatlesPlaylist("The Beatles");
 
     Band theBeatles("The Beatles");
@@ -64,10 +64,40 @@ int main() {
 
     #pragma region Classical Piano
     Playlist ClassicalPianoPlaylist("Classical Piano");
+
+    SoloArtist ludwigVanBeethoven("Ludwig van Beethoven", 12345, 5);
+    SoloArtist fredericChopin("Frederic Chopin", 12345, 5);
+    SoloArtist wolfgangMozart("Wolfgang Amadeus Mozart", 12345, 5);
+    SoloArtist johannSebastianBach("Johann Sebastian Bach", 12345, 5);
+
+    Song moonlightSonata("Moonlight Sonata", "1802", "Classical", &ludwigVanBeethoven, "Piano Sonata No. 14", 900);
+    Song nocturneOp9("Nocturne Op. 9 No. 2", "1832", "Classical", &fredericChopin, "Nocturnes, Op. 9", 270);
+    Song rondoAllaTurca("Rondo Alla Turca", "1783", "Classical", &wolfgangMozart, "Piano Sonata No. 11", 210);
+    Song preludeInC("Prelude in C Major", "1722", "Classical", &johannSebastianBach, "The Well-Tempered Clavier", 120);
+
+    ClassicalPianoPlaylist.AddSong(moonlightSonata);
+    ClassicalPianoPlaylist.AddSong(nocturneOp9);
+    ClassicalPianoPlaylist.AddSong(rondoAllaTurca);
+    ClassicalPianoPlaylist.AddSong(preludeInC);
     #pragma endregion HypeGameMusic
 
     #pragma region Road Trip Singalong
     Playlist RoadTripSingalongPlaylist("Road Trip Singalongs");
+
+    SoloArtist billyJoel("Billy Joel", 12345, 5);
+    SoloArtist journey("Journey", 12345, 5);
+    SoloArtist bonJovi("Bon Jovi", 12345, 5);
+    SoloArtist toto("Toto", 12345, 5);
+
+    Song pianoMan("Piano Man", "1973", "Folk-Rock", &billyJoel, "Piano Man", 339);
+    Song dontStopBelievin("Don't Stop Believin'", "1981", "Rock", &journey, "Escape", 251);
+    Song livinOnAPrayer("Livin' on a Prayer", "1986", "Rock", &bonJovi, "Slippery When Wet", 249);
+    Song africa("Africa", "1982", "Rock", &toto, "Toto IV", 295);
+
+    RoadTripSingalongPlaylist.AddSong(pianoMan);
+    RoadTripSingalongPlaylist.AddSong(dontStopBelievin);
+    RoadTripSingalongPlaylist.AddSong(livinOnAPrayer);
+    RoadTripSingalongPlaylist.AddSong(africa);
     #pragma endregion HypeGameMusic
 
     string userInput;
@@ -93,7 +123,7 @@ int main() {
         selectedPlaylist = RoadTripSingalongPlaylist;
     }
 
-    userInput = " ";
+    userInput = " "; //Clears user input for choosing options inside playlist
 
     DisplayCurrSong(selectedPlaylist);
     while (userInput != "a" && userInput != "d" && userInput != "q")

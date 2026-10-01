@@ -31,8 +31,17 @@ using namespace std;
             SetBandName(bandName);
         }
 
+        GroupArtist::GroupArtist(const GroupArtist& copy)
+        {
+            SetArtistName(copy.GetArtistName());
+            SetFollowers(copy.GetFollowers());
+            SetRating(copy.GetRating());
+            SetBandName(copy.GetBandName());
+        }
+
+
         void GroupArtist::SetBandName(string name)
             { bandName = name; }
-        string GroupArtist::GetBandName()
+        string GroupArtist::GetBandName() const
             { return bandName; }
              

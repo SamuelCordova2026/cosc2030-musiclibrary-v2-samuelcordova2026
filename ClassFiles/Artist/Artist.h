@@ -18,8 +18,8 @@ class Artist
         void SetArtistName(string name);
         void SetFollowers(int followers);
         void SetRating(double rating);        
-        string GetArtistName();            
-        int GetFollowers();
-        double GetRating();
+        string GetArtistName() const;            
+        int GetFollowers() const;
+        double GetRating() const;
 }; 
 #endif

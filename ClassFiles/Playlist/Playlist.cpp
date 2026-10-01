@@ -13,6 +13,7 @@ using namespace std;
             playlistName = name;
         }
         
+        
         void DisplayCurrSong(Playlist& playlist)
         {
             cout << "Track " << playlist.currSongIndex + 1 << ": " << playlist.songList.at(playlist.currSongIndex).GetSongName() << endl;

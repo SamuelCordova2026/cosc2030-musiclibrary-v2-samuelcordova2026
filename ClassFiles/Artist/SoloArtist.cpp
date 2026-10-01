@@ -25,3 +25,11 @@ SoloArtist::SoloArtist(string name, int followers, double rating)
     SetFollowers(followers);
     SetRating(rating);
 }
+
+SoloArtist::SoloArtist(const SoloArtist& copy)
+{
+    SetArtistName(copy.GetArtistName());
+    SetFollowers(copy.GetFollowers());
+    SetRating(copy.GetRating());
+}
+

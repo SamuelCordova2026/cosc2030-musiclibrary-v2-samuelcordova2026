@@ -16,8 +16,10 @@ class GroupArtist : public Artist //Inheritance
         GroupArtist();
         GroupArtist(string name, string bandName, int followers, double rating);
 
+        GroupArtist(const GroupArtist& copy);
+
         void SetBandName(string name);
-        string GetBandName();
+        string GetBandName() const;
 };
 
 #endif

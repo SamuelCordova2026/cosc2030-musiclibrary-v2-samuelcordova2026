@@ -1,5 +1,5 @@
 # Music Library
-I want to make a program that acts sort of like a playlist. It will play a song, display the details of the artist/band that made it, and you can cycle through the playlist to see each song.
+I want to make a program that acts as a playlist viewer. You will select a playlist, it will play (display details of) the song, and you can go to the next or previous track in the playlist.
 # Additional Classes
 - GroupArtist
 - SoloArtist

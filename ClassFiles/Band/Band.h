@@ -18,11 +18,13 @@ class Band
         Band();
         Band(string name);
 
+        Band(const Band& copy);
+
         void DisplayMembers();
 
         void SetName(string name);
         void SetMembers(vector<GroupArtist> members);
-        string GetName();
+        string GetName() const;
         vector<GroupArtist> GetMembers();
 
         void AddMember(GroupArtist);

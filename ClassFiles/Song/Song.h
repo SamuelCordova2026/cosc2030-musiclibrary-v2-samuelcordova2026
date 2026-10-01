@@ -22,6 +22,7 @@ class Song
         Song();
         Song(string name, string date, string genre, Artist* artist, string albumName, int length);
         Song(string name, string date, string genre, Band band, string albumName, int length);
+        Song(Song& copy);
         void Display();
         void SetSongName(string name);
         void SetSongDate(string date);
@@ -30,13 +31,13 @@ class Song
         void SetSongBand(Band band);
         void SetSongAlbum(string album);
         void SetSongLength(int length);
-        string GetSongName();
-        string GetSongDate();        
-        string GetSongGenre();
-        Artist* GetSongArtist();
-        Band GetSongBand();
-        string GetSongAlbum();
-        int GetSongLength();
+        string GetSongName() const;
+        string GetSongDate() const;        
+        string GetSongGenre() const;
+        Artist* GetSongArtist() const;
+        Band GetSongBand() const; 
+        string GetSongAlbum() const;
+        int GetSongLength() const;
     }; 
 
 #endif

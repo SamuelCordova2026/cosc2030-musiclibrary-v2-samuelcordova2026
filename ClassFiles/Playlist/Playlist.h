@@ -14,6 +14,12 @@ class Playlist
         Playlist();
         Playlist(string name);
 
+        Playlist(const Playlist& copy)
+        {
+            playlistName = copy.playlistName;
+            songList = copy.songList;
+        }
+
         void AddSong(Song song);
         
         void NextSong();

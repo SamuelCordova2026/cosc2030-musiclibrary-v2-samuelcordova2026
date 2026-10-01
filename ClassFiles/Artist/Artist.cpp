@@ -13,13 +13,13 @@ void Artist::SetFollowers(int followers)
 void Artist::SetRating(double rating)
     { artistRating = rating; }
 
-string Artist::GetArtistName()
+string Artist::GetArtistName() const
     { return artistName; }
     
 
 
-int Artist::GetFollowers()
+int Artist::GetFollowers() const
     { return artistFollowers; }
 
-double Artist::GetRating()
+double Artist::GetRating() const
     { return artistRating; } 

@@ -37,6 +37,17 @@ Song::Song(string name, string date, string genre, Band band, string albumName, 
     isBand = true;
 }
 
+Song::Song(Song& copy)
+{
+    SetSongName(copy.GetSongName());
+    SetSongDate(copy.GetSongDate());
+    SetSongGenre(copy.GetSongGenre());
+    SetSongBand(copy.GetSongBand());
+    SetSongAlbum(copy.GetSongAlbum());
+    SetSongLength(copy.GetSongLength());
+}
+
+
 void Song::Display()
 {
     if (!isBand)
@@ -86,23 +97,23 @@ void Song::SetSongAlbum(string album)
 void Song::SetSongLength(int length)
     { songLength = length; }
 
-string Song::GetSongName()
+string Song::GetSongName() const
     { return songName; }
 
-string Song::GetSongDate()
+string Song::GetSongDate() const
     { return releaseDate; }
 
-string Song::GetSongGenre()
+string Song::GetSongGenre() const
     { return songGenre; }
 
-Artist* Song::GetSongArtist()
+Artist* Song::GetSongArtist() const
     { return songArtist; }
 
-Band Song::GetSongBand()
+Band Song::GetSongBand() const
     { return songBand; }
 
-string Song::GetSongAlbum()
+string Song::GetSongAlbum() const
     { return albumName; }
 
-int Song::GetSongLength()
+int Song::GetSongLength() const
     { return songLength; }

@@ -16,6 +16,13 @@ Band::Band()
 {
     bandName = "none";
 }
+
+Band::Band(const Band& copy)
+{
+    SetName(copy.GetName());
+    SetMembers(copy.bandMembers);
+}
+
 void Band::DisplayMembers()
 {
     cout << endl;
@@ -31,7 +38,7 @@ void Band::SetName(string name)
 void Band::SetMembers(vector<GroupArtist> members)
     { bandMembers = members; }
 
-string Band::GetName()
+string Band::GetName() const
     { return bandName; }
 vector<GroupArtist> Band::GetMembers()
     { return bandMembers; }

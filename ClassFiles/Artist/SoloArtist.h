@@ -10,6 +10,8 @@ class SoloArtist : public Artist //Inheritance
         void Display() override; //Polymorphism
         SoloArtist();
         SoloArtist(string name, int followers, double rating);
+
+        SoloArtist(const SoloArtist& copy);
 };
 
 #endif
