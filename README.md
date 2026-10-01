@@ -24,4 +24,4 @@ I want to make a program that acts as a playlist viewer. You will select a playl
 ![UML Diagram](umlDiagram.png)
 
 ### Updated Diagram
-![UML Diagram](UpdgatedUml.png)
+![UML Diagram](UpdatedUml.png)
