@@ -25,3 +25,20 @@ I want to make a program that acts as a playlist viewer. You will select a playl
 
 ### Updated Diagram
 ![UML Diagram](UpdatedUml.png)
+
+## Week 13 - Sorting Algorithm
+- Vector: In the Playlist class, there is a vector that holds all the songs in that playlist.
+### Task 2
+![SortedScreenshot](SortedListScreenshot.png)
+The playlist is sorted alphabetically by the song titles.
+### Task 3
+1. I chose a bubble sort, simply because its one of the sorting methods that I've heard the most about. It's also one of the easier sorting algorithyms to learn and understand.
+2. The best Time complexity is O(n), Average is O(n^2), and Worst is O(n^2). I expected it to work well with my dataset since it's only 4 entries long, meanining
+3. The longer the list is, the worse the memory usage is. Bubble sort is known for being extremely inefficient while being easy to understand, which is much more clear in a bigger dataset.
+4. Bubble sort is one of the easiest sorting algorithms to understand, but it is also extremely inneficient. I would recommend it to beginners to learn the idea of how sorting algorithms work, and wouldn't reccommend it for much else.
+5. For the current playlists, it doesn't help much since they have so few entries. However, if someone were to make a playlist with more entries, it could be extremely helpful for them to find the song they're looking for since they simply have to scroll through the songs until they get to the letter they want.
+
+Sources: 
+https://www.geeksforgeeks.org/dsa/bubble-sort-algorithm/
+https://www.geeksforgeeks.org/dsa/time-and-space-complexity-analysis-of-bubble-sort/
+
