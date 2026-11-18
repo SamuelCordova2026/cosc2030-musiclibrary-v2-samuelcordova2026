@@ -30,6 +30,9 @@ class Playlist
 
         friend void DisplayCurrSong(Playlist& playlist); //Friend function so it can be called fron main
 
+        void SortList();
+        void DisplaySongList();
+
 };
 
 #endif

@@ -37,14 +37,17 @@ Song::Song(string name, string date, string genre, Band band, string albumName, 
     isBand = true;
 }
 
-Song::Song(Song& copy)
+Song::Song(const Song& copy)
 {
     SetSongName(copy.GetSongName());
     SetSongDate(copy.GetSongDate());
     SetSongGenre(copy.GetSongGenre());
+    SetSongArtist(copy.GetSongArtist());
     SetSongBand(copy.GetSongBand());
     SetSongAlbum(copy.GetSongAlbum());
     SetSongLength(copy.GetSongLength());
+
+    isBand = copy.isBand;
 }
 
 

@@ -22,7 +22,7 @@ class Song
         Song();
         Song(string name, string date, string genre, Artist* artist, string albumName, int length);
         Song(string name, string date, string genre, Band band, string albumName, int length);
-        Song(Song& copy);
+        Song(const Song& copy);
         void Display();
         void SetSongName(string name);
         void SetSongDate(string date);

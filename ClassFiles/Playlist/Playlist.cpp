@@ -1,6 +1,7 @@
 #include "Playlist.h"
 
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -66,6 +67,34 @@ using namespace std;
             }
 
             DisplayCurrSong(*this);
+        }
+
+        void Playlist::SortList()
+        {
+            //This will sort the playlist alphabetically based on song title
+            bool swapped;
+            for (int i = 0; i < songList.size() - 1; i++)
+            {
+                swapped = false;
+                for (int j = 0; j < songList.size() - i - 1; j++)
+                {
+                    if (songList[j].GetSongName() > songList[j + 1].GetSongName())
+                    {
+                        swap(songList[j], songList[j + 1]);
+
+                        swapped = true;
+                    }
+                }
+                if (!swapped) { break; }
+            }
+        }
+
+        void Playlist::DisplaySongList()
+        {
+            for (int i = 0; i < songList.size(); i++)
+            {
+                songList[i].Display();
+            }
         }
 
         

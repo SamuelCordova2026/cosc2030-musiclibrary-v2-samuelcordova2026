@@ -131,11 +131,12 @@ int main() {
     userInput = " "; //Clears user input for choosing options inside playlist
 
     DisplayCurrSong(selectedPlaylist);
-    while (userInput != "a" && userInput != "d" && userInput != "q")
+    while (userInput != "a" && userInput != "d" && userInput != "q" && userInput != "s")
     {
         cout << endl << endl;
         cout << " -> Next song: d" << endl; //User inputs d to go to next song
         cout << " <- Previous song: a" << endl; //User inputs a to go to previous osng
+        cout << "Sort Playlist by song name: s" << endl;
         cout << "Quit Program: q" << endl; //user inputs q to quit program
         cout << "Please type your choice: ";
         cin >> userInput;
@@ -146,6 +147,12 @@ int main() {
         else if (userInput == "d")
         {
             selectedPlaylist.NextSong();
+        }
+        else if (userInput == "s")
+        {
+            selectedPlaylist.SortList();
+            cout << endl <<  "The sorted list is: ";
+            selectedPlaylist.DisplaySongList();
         }
         else if (userInput == "q")
         {
