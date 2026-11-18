@@ -93,7 +93,7 @@ using namespace std;
         {
             for (int i = 0; i < songList.size(); i++)
             {
-                songList[i].Display();
+                cout << "Song " << i + 1 << ": " << songList[i].GetSongName() << endl;
             }
         }
 

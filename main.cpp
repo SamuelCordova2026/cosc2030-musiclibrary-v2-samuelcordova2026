@@ -151,7 +151,7 @@ int main() {
         else if (userInput == "s")
         {
             selectedPlaylist.SortList();
-            cout << endl <<  "The sorted list is: ";
+            cout << endl <<  "The sorted list is: " << endl;
             selectedPlaylist.DisplaySongList();
         }
         else if (userInput == "q")
